@@ -11,15 +11,22 @@ import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 
 import './styles.css'
 import reportWebVitals from './reportWebVitals.ts'
+import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar.tsx'
+import { AppSidebar } from '@/components/app-sidebar.tsx'
 
 import App from './App.tsx'
 
 const rootRoute = createRootRoute({
   component: () => (
-    <>
+    <SidebarProvider>
+    <AppSidebar />
+    <main>
+      <SidebarTrigger />
       <Outlet />
+    </main>
+
       <TanStackRouterDevtools />
-    </>
+    </SidebarProvider>
   ),
 })
 
