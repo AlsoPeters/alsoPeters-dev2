@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
+import { Rss, User, Code } from "lucide-react"
 
 import {
     Sidebar,
@@ -13,29 +13,19 @@ import {
  // Menu items.
 const items = [
   {
-    title: "Home",
-    url: "#",
-    icon: Home,
+    title: "About",
+    url: "/",
+    icon: User,
   },
   {
-    title: "Inbox",
-    url: "#",
-    icon: Inbox,
+    title: "Projects",
+    url: "projects",
+    icon: Code,
   },
   {
-    title: "Calendar",
-    url: "#",
-    icon: Calendar,
-  },
-  {
-    title: "Search",
-    url: "#",
-    icon: Search,
-  },
-  {
-    title: "Settings",
-    url: "#",
-    icon: Settings,
+    title: "Blog",
+    url: "blog",
+    icon: Rss,
   },
 ] 
   
@@ -44,7 +34,7 @@ const items = [
       <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-            <SidebarGroupLabel>Application</SidebarGroupLabel>
+            <SidebarGroupLabel>Kyle Ryan Garcia</SidebarGroupLabel>
             <SidebarContent>
               <SidebarMenu>
                 {items.map((item) => (
